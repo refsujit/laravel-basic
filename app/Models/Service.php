@@ -6,7 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Service extends Model
 {
-    protected $fillable = [
+
+    protected $table = 'services'; // always plural (optional)
+
+    protected $fillable = [     // required for mass assignment
         'name'
     ];
 }
+
+
+
+

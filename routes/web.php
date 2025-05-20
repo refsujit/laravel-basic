@@ -6,15 +6,9 @@ use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ServiceController;
 
-
-
-Route::get('/about',[AboutController::class, 'index'])->name('about.index');;
-Route::get('/asdf',[AboutController::class, 'test'])->name('about.test');
-
-// Route::get('/asdf', function () {
-//     return view('welcome');
-// })->name('home');
+Route::resource('service',ServiceController::class);
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
