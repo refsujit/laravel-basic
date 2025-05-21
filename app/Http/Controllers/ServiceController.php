@@ -32,7 +32,10 @@ class ServiceController extends Controller
         // Form validation
         $validData = $request->validate([
             'name' => 'required',
+            'image' => 'nullable|max:4096'
         ]);
+
+        dd($request->image);
 
         // Method 1 - using new instance
         $model = new Service;

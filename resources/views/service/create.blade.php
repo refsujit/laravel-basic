@@ -13,9 +13,10 @@
    
     @include('partials.flash')
 
-    <form method="post" action="{{ route('service.store') }}">
+    <form method="post" action="{{ route('service.store') }}" enctype="multipart/form-data">
         @csrf
         <input type="text" name="name">
+        <input type="file" name="image">
         <input type="submit" name="submit" value="Submit">
     </form>
 </body>
